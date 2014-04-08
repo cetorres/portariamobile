@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="item_selected">#DDDDDD</color>
+    <color name="pendente">#f1c40f</color>
+    <color name="autorizado">#2ecc71</color>
+    <color name="naoautorizado">#c0392b</color>
+</resources>

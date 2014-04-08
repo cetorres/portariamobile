@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15sp"
+    tools:context=".DetailActivity"
+    android:background="#EEE" >
+    
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <RelativeLayout
+		        android:id="@+id/layoutDetailTopo"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignParentTop="true"
+		        android:background="@drawable/shape_card"
+		        android:paddingLeft="5dip"
+		        android:paddingRight="5dip"
+		        android:layout_marginBottom="10dip" >
+		        
+		        <TextView
+			        android:id="@+id/txtTituloData"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:text="Recebida em"
+			        android:textColor="#999"
+			        android:paddingTop="5dip"
+			        android:paddingBottom="5dip"
+			        android:background="@drawable/shape_border_title" />        
+		
+		        <TextView
+		            android:id="@+id/txtData"
+		            android:paddingTop="5dip"
+		            android:paddingBottom="10dip"
+		            android:textAppearance="@android:style/TextAppearance.Medium"
+		            android:layout_below="@+id/txtTituloData"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="99/99/9999 99:99:99" />
+		        
+		    </RelativeLayout>
+		
+		    <RelativeLayout
+		        android:id="@+id/layoutDetailVisitante"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/layoutDetailTopo"
+		        android:background="@drawable/shape_card"
+		        android:paddingTop="5dip"
+		        android:paddingLeft="5dip"
+		        android:paddingRight="5dip"
+		        android:layout_marginBottom="10dip" >
+		        
+		        <TextView
+			        android:id="@+id/txtTituloVisitante"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:text="Visitante"
+			        android:textColor="#999"
+			        android:paddingBottom="5dip"
+			        android:background="@drawable/shape_border_title" />
+		        
+		        <TextView
+			        android:id="@+id/txtDetailVisitante"
+		            android:paddingTop="5dip"
+		            android:paddingBottom="10dip"
+		            android:textAppearance="@android:style/TextAppearance.Medium"
+		            android:layout_below="@+id/txtTituloVisitante"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Visitante"
+			         />
+		        
+		        <TextView
+			        android:id="@+id/txtTituloObs"
+			        android:layout_below="@+id/txtDetailVisitante"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:textColor="#999"
+			        android:text="Observação do porteiro"
+			        android:paddingBottom="5dip"
+			        android:background="@drawable/shape_border_title" />        
+		
+		        <TextView
+		            android:id="@+id/txtObs"
+		            android:paddingTop="5dip"
+		            android:paddingBottom="10dip"
+		            android:textAppearance="@android:style/TextAppearance.Medium"
+		            android:layout_below="@+id/txtTituloObs"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Obs aqui" />
+		        
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:id="@+id/layoutDetailRespondido"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/layoutDetailVisitante"
+		        android:background="@drawable/shape_card"
+		        android:paddingTop="5dip"
+		        android:paddingLeft="5dip"
+		        android:paddingRight="5dip"
+		        android:layout_marginBottom="10dip" >
+		        
+		        <TextView
+		            android:id="@+id/txtTituloRespondido"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:background="@drawable/shape_border_title"
+		            android:paddingBottom="5dip"
+		            android:text="Resposta à soliciação"
+		            android:textColor="#999" />
+		        
+		        <ImageView
+		            android:id="@+id/imageViewIcon"
+		            android:layout_width="55dp"
+		            android:layout_height="55dp"
+		            android:layout_below="@+id/txtTituloRespondido"
+		            android:paddingBottom="8dp"
+		            android:paddingTop="5dp"
+		            android:src="@drawable/icon_green" />
+		        
+		        <TextView
+		            android:id="@+id/txtRespondido"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@+id/imageViewIcon"
+		            android:layout_below="@+id/txtTituloRespondido"
+		            android:paddingTop="5dip"
+		            android:text="Autorizado"
+		            android:textAppearance="@android:style/TextAppearance.Medium" />
+		        
+		        <TextView
+		            android:id="@+id/txtObsMor"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:paddingBottom="8dip"
+		            android:layout_toRightOf="@+id/imageViewIcon"
+		            android:layout_below="@+id/txtRespondido"
+		            android:text="Observação" />
+
+		    </RelativeLayout>
+		    		        
+		    <RelativeLayout
+		        android:id="@+id/layoutDetailResposta"
+		        android:layout_width="match_parent"
+		        android:layout_height="165dip"
+		        android:layout_below="@+id/layoutDetailVisitante"
+		        android:background="@drawable/shape_card"
+		        android:paddingTop="5dip"
+		        android:paddingLeft="5dip"
+		        android:paddingRight="5dip" >
+		        
+		        <TextView
+			        android:id="@+id/txtTituloResposta"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:textColor="#999"
+			        android:text="Resposta à soliciação"
+			        android:paddingBottom="5dip"
+			        android:background="@drawable/shape_border_title" />
+		
+		        <EditText
+		            android:id="@+id/editTextObsMor"
+		            android:layout_width="match_parent"
+		            android:layout_height="65dp"
+		            android:layout_alignLeft="@+id/txtTituloResposta"
+		            android:layout_below="@+id/txtTituloResposta"
+		            android:ems="10"
+		            android:layout_marginBottom="8dp"
+		            android:hint="Mensagem para o porteiro"
+		            android:inputType="textMultiLine|textCapSentences" />
+		
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:orientation="horizontal"
+		            android:layout_below="@+id/editTextObsMor" >
+		        
+			        <Button
+			            android:id="@+id/butAutoriza"
+			            android:layout_width="0dp"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="0.5"
+			            android:background="@drawable/but_green_selector"
+			            android:textColor="#FFF"
+			            android:onClick="butAutoriza_OnClick"
+			            android:text="Autorizar" />
+					
+			        <View
+				        android:id="@+id/viewSep"
+				        android:layout_width="4dp"
+				        android:layout_height="1dp"
+				        android:layout_centerHorizontal="true" />
+			        
+			        <Button
+			            android:id="@+id/butNaoAutoriza"
+			            android:layout_width="0dp"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="0.5"
+			            android:background="@drawable/but_red_selector"
+			            android:textColor="#FFF"
+			            android:onClick="butNaoAutoriza_OnClick"
+			            android:text="Não Autorizar" />
+		        
+		        </LinearLayout>
+		        
+		    </RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

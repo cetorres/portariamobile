@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Portaria Mobile</string>
+    <string name="descricao">Com o Portaria Mobile, você autoriza a entrada de pessoas em seu condomínio através do seu smartphone.</string>
+    
+    <!-- <string name="webserviceUrl">http://cacira.com.br/portariamobile/ws/</string> -->
+    <string name="webserviceUrl">http://cacira.com.br/portariamobile/ws/</string>
+    
+    <string name="perguntaAutorizacao">deseja entrar. Posso autorizar?\n\nMensagem para o porteiro</string>
+    <string name="entrarInformacoes">Entre com as informações de identificação do usuário.</string>
+    
+    <string name="action_refresh">Atualizar</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_logout">Desconectar</string>
+    <string name="action_about">Sobre</string>
+    
+    <string name="sobre_empresa">Desenvolvimento:\n\nCACIRA TECNOLOGIA LTDA\nCriamos aplicativos móveis fantásticos para o seu negócio.\n\nTel/Fax: (85) 3273-5701\nCel.: (85) 8855-1313\nSite: http://cacira.com.br\nEmail: contato@cacira.com.br</string>
+    
+    <string name="title_activity_detail">Solicitação de Entrada</string> 
+    
+    <string name="preferences_login_title">Identificação do Usuário</string>
+    <string name="preferences_condominio">Condomínio</string>
+    <string name="preferences_nome">Nome</string>
+    <string name="preferences_email">E-mail</string>
+    <string name="push_preference_category_title">Notificações</string>
+    <string name="rich_push_message_dialog_title">Rich Push Message</string>
+    <string name="location_preference_category_title">Location Preferences</string>
+    <string name="quiet_time_enable_preference_title">Ligar Não Perturbe</string>
+    <string name="quiet_time_start_preference_title">Início</string>
+    <string name="quiet_time_end_preference_title">Fim</string>
+    <string name="push_preference_title">Ligar Notificações</string>
+    <string name="sound_preference_title">Ligar Som</string>
+    <string name="vibrate_preference_title">Ligar Vibração</string>
+    <string name="location_preference_title">Ligar Localização</string>
+    <string name="foreground_location_preference_title">Enable Foreground Location</string>
+    <string name="background_location_preference_title">Enable Background Location</string>
+    <string name="apid_preference_title">APID</string>
+    <string name="advanced_preference_category_title">Advanced</string>
+    <string name="set_alias_preference_title">Set Alias</string>
+    <string name="add_tags_preference_title">Add Tags</string>
+    <string name="duplicate_tag_warning">Tag already exists</string>
+
+</resources>
