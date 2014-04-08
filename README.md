@@ -10,18 +10,19 @@ Google Play Store link: https://play.google.com/store/apps/details?id=br.com.cac
 
 More information: carlos.torres@cacira.com
 
-== Screenshots ==
+Screenshots
+===========
 
-<img src="Screenshot_2014-04-08-17-33-33.png" />
+<img src="screenshots/Screenshot_2014-04-08-17-33-33.png" />
 
-<img src="Screenshot_2014-01-20-13-55-38.png" />
+<img src="screenshots/Screenshot_2014-01-20-13-55-38.png" />
 
-<img src="Screenshot_2014-01-20-13-56-02.png" />
+<img src="screenshots/Screenshot_2014-01-20-13-56-02.png" />
 
-<img src="Screenshot_2014-01-20-13-56-45.png" />
+<img src="screenshots/Screenshot_2014-01-20-13-56-45.png" />
 
-<img src="Screenshot_2014-01-20-13-56-57.png" />
+<img src="screenshots/Screenshot_2014-01-20-13-56-57.png" />
 
-<img src="Screenshot_2014-01-20-13-57-30.png" />
+<img src="screenshots/Screenshot_2014-01-20-13-57-30.png" />
 
-<img src="Screenshot_2014-04-08-17-33-19.png" />
+<img src="screenshots/Screenshot_2014-04-08-17-33-19.png" />
