@@ -6,28 +6,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
-import java.util.Map;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import br.com.cacira.portariamobile.IntentReceiver.RespostaTask;
-
-import com.urbanairship.Logger;
 import com.urbanairship.UAirship;
-import com.urbanairship.push.BasicPushNotificationBuilder;
 import com.urbanairship.push.PushManager;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ListActivity;
-import android.app.Notification;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
@@ -38,7 +29,7 @@ import android.text.util.Linkify;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListAdapter;
@@ -51,14 +42,20 @@ public class MainActivity extends ListActivity {
 	
     JSONArray arrayEntradas = null;
     ArrayList<HashMap<String, Object>> entradasList;
-    ProgressDialog pDialog;
+    //ProgressDialog pDialog;
     SharedPreferences sharedPreferences;
     Boolean carregaEntradasLocal;
+    Boolean showRefresh;
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);				
+		
+		requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
+		
+		setContentView(R.layout.activity_main);	
+		
+		showRefresh = true;
 		        
 		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 		if (!sharedPreferences.getBoolean("loginOk", false)) {
@@ -130,11 +127,15 @@ public class MainActivity extends ListActivity {
         protected void onPreExecute() {
             super.onPreExecute();
             // Showing progress dialog
-            pDialog = new ProgressDialog(MainActivity.this);
-            pDialog.setMessage("Carregando lista de entradas...");
-            pDialog.setCancelable(true);
-            if (!carregaEntradasLocal)
-            	pDialog.show(); 
+            //pDialog = new ProgressDialog(MainActivity.this);
+            //pDialog.setMessage("Carregando lista de entradas...");
+            //pDialog.setCancelable(true);
+            if (!carregaEntradasLocal) {
+            	//pDialog.show();
+            	showRefresh = false;
+            	invalidateOptionsMenu();
+            	setProgressBarIndeterminateVisibility(Boolean.TRUE);
+            }
             
             entradasList = new ArrayList<HashMap<String, Object>>();
         }
@@ -220,8 +221,11 @@ public class MainActivity extends ListActivity {
         protected void onPostExecute(Boolean result) {
             super.onPostExecute(result);
             // Dismiss the progress dialog
-            if (pDialog.isShowing())
-                pDialog.dismiss();
+            //if (pDialog.isShowing())
+            //    pDialog.dismiss();
+            setProgressBarIndeterminateVisibility(Boolean.FALSE);
+            showRefresh = true;
+            invalidateOptionsMenu();
             
             if (result) {
 	            /**
@@ -256,6 +260,10 @@ public class MainActivity extends ListActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
+		
+		MenuItem item = menu.findItem(R.id.action_refresh);
+		item.setVisible(showRefresh); 
+		
 		return true;
 	}
 	
