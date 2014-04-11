@@ -4,8 +4,7 @@
     <string name="app_name">Portaria Mobile</string>
     <string name="descricao">Com o Portaria Mobile, você autoriza a entrada de pessoas em seu condomínio através do seu smartphone.</string>
     
-    <!-- <string name="webserviceUrl">http://cacira.com.br/portariamobile/ws/</string> -->
-    <string name="webserviceUrl">http://cacira.com.br/portariamobile/ws/</string>
+    <string name="webserviceUrl">http://removed</string>
     
     <string name="perguntaAutorizacao">deseja entrar. Posso autorizar?\n\nMensagem para o porteiro</string>
     <string name="entrarInformacoes">Entre com as informações de identificação do usuário.</string>
